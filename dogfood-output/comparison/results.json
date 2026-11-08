@@ -1,0 +1,148 @@
+{
+  "autoplay": [
+    26.901,
+    17.675,
+    11.491,
+    8.796,
+    13.58,
+    20.704,
+    31.169,
+    41.969,
+    52.769,
+    63.87,
+    74.665,
+    83.387,
+    89.219
+  ],
+  "pauseButton": true,
+  "keyboard": {
+    "min": 0,
+    "max": 100,
+    "middleClip": "inset(0px 50% 0px 0px)",
+    "fixedLayerBounds": true
+  },
+  "pointer": {
+    "left": 22,
+    "right": 80,
+    "resumed": 84.296,
+    "heldPause": true,
+    "idleDelayMs": 5000
+  },
+  "offscreenPause": true,
+  "responsive": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lang": "vi",
+      "overflow": false,
+      "legacyButtonsFit": true,
+      "browserWidthsMatch": true,
+      "browserHeightsMatch": true,
+      "sliderLabel": "So sánh giao diện cũ và hiện đại",
+      "toggleLabel": "Phát tự động"
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lang": "en",
+      "overflow": false,
+      "legacyButtonsFit": true,
+      "browserWidthsMatch": true,
+      "browserHeightsMatch": true,
+      "sliderLabel": "Compare old and modern website designs",
+      "toggleLabel": "Play automatically"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lang": "vi",
+      "overflow": false,
+      "legacyButtonsFit": true,
+      "browserWidthsMatch": true,
+      "browserHeightsMatch": true,
+      "sliderLabel": "So sánh giao diện cũ và hiện đại",
+      "toggleLabel": "Phát tự động"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lang": "en",
+      "overflow": false,
+      "legacyButtonsFit": true,
+      "browserWidthsMatch": true,
+      "browserHeightsMatch": true,
+      "sliderLabel": "Compare old and modern website designs",
+      "toggleLabel": "Play automatically"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "lang": "vi",
+      "overflow": false,
+      "legacyButtonsFit": true,
+      "browserWidthsMatch": true,
+      "browserHeightsMatch": true,
+      "sliderLabel": "So sánh giao diện cũ và hiện đại",
+      "toggleLabel": "Phát tự động"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "lang": "en",
+      "overflow": false,
+      "legacyButtonsFit": true,
+      "browserWidthsMatch": true,
+      "browserHeightsMatch": true,
+      "sliderLabel": "Compare old and modern website designs",
+      "toggleLabel": "Play automatically"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "lang": "vi",
+      "overflow": false,
+      "legacyButtonsFit": true,
+      "browserWidthsMatch": true,
+      "browserHeightsMatch": true,
+      "sliderLabel": "So sánh giao diện cũ và hiện đại",
+      "toggleLabel": "Phát tự động"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "lang": "en",
+      "overflow": false,
+      "legacyButtonsFit": true,
+      "browserWidthsMatch": true,
+      "browserHeightsMatch": true,
+      "sliderLabel": "Compare old and modern website designs",
+      "toggleLabel": "Play automatically"
+    }
+  ],
+  "reducedMotion": {
+    "automaticPosition": 50,
+    "manualControlWorks": true
+  },
+  "touch": {
+    "position": 20,
+    "passed": true
+  },
+  "errors": [],
+  "pass": true
+}

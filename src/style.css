@@ -52,8 +52,13 @@ em { font-style: italic; }
 .loader {
   position: fixed; inset: 0; z-index: 100;
   display: grid; place-items: center;
+  --loader-draw-duration: 1400ms;
+  --loader-letter-duration: 800ms;
+  --loader-letter-delay: 500ms;
+  --loader-hold-ms: 600;
+  --loader-exit-duration: 600ms;
   background: var(--sand);
-  transition: clip-path .5s var(--ease-io), visibility 0s .5s;
+  transition: clip-path var(--loader-exit-duration) var(--ease-io), visibility 0s var(--loader-exit-duration);
   clip-path: inset(0 0 0 0);
 }
 .loader.is-done { clip-path: inset(0 0 100% 0); visibility: hidden; }
@@ -62,9 +67,9 @@ em { font-style: italic; }
 .loader__mark circle {
   fill: none; stroke: var(--ink); stroke-width: 1.2;
   stroke-dasharray: 290; stroke-dashoffset: 290;
-  animation: draw 1.4s var(--ease-io) forwards;
+  animation: draw var(--loader-draw-duration) var(--ease-io) forwards;
 }
-.loader__mark span { font-family: var(--serif); font-size: 40px; opacity: 0; animation: fade 0.8s 0.5s forwards; }
+.loader__mark span { font-family: var(--serif); font-size: 40px; opacity: 0; animation: fade var(--loader-letter-duration) var(--loader-letter-delay) forwards; }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 @keyframes fade { to { opacity: 1; } }
 
@@ -464,7 +469,7 @@ body.is-ready .showcase { transition-delay: .22s; }
   .phone { width: 148px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; animation-delay: 0s !important; transition-duration: .001ms !important; transition-delay: 0s !important; }
   html { scroll-behavior: auto; }
 }
 

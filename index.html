@@ -14,11 +14,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Be+Vietnam+Pro:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/comparison.css" />
 </head>
-<body>
+<body class="is-loading" aria-busy="true">
   <a class="skip-link" href="#top">Bỏ qua điều hướng / Skip to content</a>
   <!-- Preloader -->
-  <div class="loader" id="loader" aria-hidden="true">
+  <div class="loader" id="loader" role="status" aria-label="Clarté Design" aria-live="polite">
     <div class="loader__mark">
       <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" /></svg>
       <span>C</span>
@@ -73,6 +74,13 @@
       </div>
       <div class="hero__visual container" id="principles">
         <div class="showcase reveal-hero" id="showcase">
+          <div class="comparison-toolbar">
+            <span class="comparison-version comparison-version--legacy"><i></i><span data-i18n="compare.old">Giao diện cũ</span></span>
+            <button type="button" class="comparison-toggle" id="comparisonToggle" aria-pressed="false" aria-controls="comparisonStage"><span class="comparison-toggle__icon" aria-hidden="true"></span><span data-i18n="compare.pause">Tạm dừng</span></button>
+            <span class="comparison-version"><i></i><span data-i18n="compare.modern">Thiết kế hiện đại</span></span>
+          </div>
+          <div class="comparison-stage" id="comparisonStage" style="--split: 50%">
+            <div class="comparison-layer comparison-modern" aria-hidden="true">
           <div class="browser">
             <div class="browser__bar">
               <i class="d d--gold"></i><i class="d"></i><i class="d"></i>
@@ -108,6 +116,55 @@
             <em class="mini-btn mini-btn--block">Book now<span class="spot" data-spot="4">4</span></em>
             <p class="ph-meta"><i></i>Today · 10:30</p>
             <div class="phone__tabs"><span class="on">Home</span><span>Book</span><span>Chat</span><span>Me</span></div>
+          </div>
+            </div>
+            <div class="comparison-layer comparison-legacy" aria-hidden="true" inert>
+          <div class="browser">
+            <div class="browser__bar">
+              <i class="d d--gold"></i><i class="d"></i><i class="d"></i>
+              <span class="url">aura.studio / home.html</span>
+            </div>
+            <div class="browser__nav">
+              <b>Aura</b>
+              <span>Home</span><span>Work</span><span>About</span>
+              <em class="mini-btn">Contact</em>
+              <span class="spot" data-spot="1">1</span>
+            </div>
+            <div class="browser__hero">
+              <div>
+                <p class="bh-title">Design that feels <em>effortless</em>.</p>
+                <p class="bh-sub">Simple, elegant, easy to use.</p>
+                <div class="bh-btns"><em class="mini-btn">Get started<span class="spot" data-spot="2">2</span></em><em class="mini-btn mini-btn--ghost">Learn more</em></div>
+              </div>
+              <div class="landscape"><i class="sunc"></i><i class="hill hill--back"></i><i class="hill hill--front"></i></div>
+            </div>
+            <div class="browser__cards">
+              <div><i class="ic ic--gold"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="2"/><path d="M8 20h8m-4-3v3"/></svg></i><b>Web design</b><small>Clean layouts</small></div>
+              <div><i class="ic ic--ink"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/></svg></i><b>App design</b><small>Smooth flows</small><span class="spot" data-spot="3">3</span></div>
+              <div><i class="ic ic--taupe"><svg viewBox="0 0 24 24"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/></svg></i><b>UI / UX</b><small>Clear systems</small></div>
+            </div>
+          </div>
+
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__head"><b>Aura</b><span class="ham"></span></div>
+            <div class="landscape landscape--sm"><i class="sunc"></i><i class="hill hill--back"></i><i class="hill hill--front"></i></div>
+            <p class="ph-title">Book your visit</p>
+            <p class="ph-sub">Easy, in one tap.</p>
+            <em class="mini-btn mini-btn--block">Book now<span class="spot" data-spot="4">4</span></em>
+            <p class="ph-meta"><i></i>Today · 10:30</p>
+            <div class="phone__tabs"><span class="on">Home</span><span>Book</span><span>Chat</span><span>Me</span></div>
+          </div>
+            </div>
+            <div class="comparison-divider">
+              <button type="button" id="comparisonHandle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal" aria-label="So sánh giao diện cũ và hiện đại" aria-describedby="comparisonHint">
+                <svg viewBox="0 0 32 20" aria-hidden="true"><path d="M11 4 5 10l6 6M21 4l6 6-6 6M16 3v14" /></svg>
+              </button>
+            </div>
+          </div>
+          <div class="comparison-caption">
+            <p id="comparisonHint" data-i18n="compare.hint">Kéo sang trái để thấy thiết kế mới, sang phải để trở về giao diện cũ.</p>
+            <span id="comparisonStatus" data-i18n="compare.auto">Đang tự động so sánh</span>
           </div>
         </div>
         <ul class="legend" aria-label="Design principles">

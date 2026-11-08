@@ -17,6 +17,17 @@ export const DICT = {
     'hero.meta2': 'Ứng dụng di động',
     'hero.meta3': 'Nhận diện số',
 
+    'compare.old': 'Giao diện cũ',
+    'compare.modern': 'Thiết kế hiện đại',
+    'compare.pause': 'Tạm dừng',
+    'compare.play': 'Phát tự động',
+    'compare.hint': 'Kéo sang trái để thấy thiết kế mới, sang phải để trở về giao diện cũ.',
+    'compare.auto': 'Đang tự động so sánh',
+    'compare.manual': 'Bạn đang điều khiển · Tự chạy lại sau 5 giây',
+    'compare.paused': 'Đã tạm dừng tự động',
+    'compare.reduced': 'Chế độ giảm chuyển động',
+    'compare.slider': 'So sánh giao diện cũ và hiện đại',
+
     'about.label': 'Về Clarté',
     'about.statement':
       'Clarté Design là studio thiết kế website và ứng dụng cho mọi lĩnh vực. Chúng tôi tin rằng sự rõ ràng là sang trọng mới: mỗi sản phẩm được thiết kế tối giản, dễ dùng và chỉn chu từng chi tiết, để thương hiệu của bạn nổi bật một cách tự nhiên.',
@@ -116,6 +127,17 @@ export const DICT = {
     'hero.meta1': 'Websites',
     'hero.meta2': 'Mobile apps',
     'hero.meta3': 'Digital identity',
+
+    'compare.old': 'Old website',
+    'compare.modern': 'Modern design',
+    'compare.pause': 'Pause',
+    'compare.play': 'Play automatically',
+    'compare.hint': 'Drag left to reveal the modern design, right to bring back the old website.',
+    'compare.auto': 'Automatically comparing',
+    'compare.manual': 'Your control · Autoplay resumes after 5 seconds',
+    'compare.paused': 'Autoplay paused',
+    'compare.reduced': 'Reduced motion enabled',
+    'compare.slider': 'Compare old and modern website designs',
 
     'about.label': 'About Clarté',
     'about.statement':

@@ -1,5 +1,7 @@
 import { DICT, INDUSTRIES } from './i18n.js';
 import { CONTACT } from './config.js';
+import { initComparison } from './comparison.js';
+import { completeIntro } from './loader.js';
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = (s, r = document) => r.querySelector(s);
@@ -50,6 +52,7 @@ function applyLang(next) {
     $('#formNote').textContent = d['form.demo'];
     $('#form button[type=submit] [data-i18n]').textContent = d['form.prepare'];
   }
+  window.dispatchEvent(new Event('clarte:languagechange'));
 }
 
 $$('.lang button').forEach((b) => b.addEventListener('click', () => applyLang(b.dataset.lang)));
@@ -98,12 +101,41 @@ async function bootScene() {
 }
 
 /* ---------------- Loader ---------------- */
-const minDelay = new Promise((r) => setTimeout(r, reducedMotion ? 0 : 350));
+const loader = $('#loader');
+const pageRegions = [$('#nav'), $('main'), $('.footer')];
+const previousInert = pageRegions.map(region => region.inert);
+pageRegions.forEach(region => { region.inert = true; });
 document.body.classList.add('is-loading');
-Promise.all([bootScene().catch((e) => { canvas.hidden = true; console.warn('WebGL disabled:', e); }), Promise.race([document.fonts?.ready, new Promise((resolve) => setTimeout(resolve, 2500))]), minDelay]).then(() => {
-  $('#loader').classList.add('is-done');
-  document.body.classList.remove('is-loading');
-  setTimeout(() => document.body.classList.add('is-ready'), 250);
+document.body.setAttribute('aria-busy', 'true');
+
+function loaderAnimationsFinished() {
+  // Flush style changes so newly started CSS transitions are included.
+  getComputedStyle(loader).clipPath;
+  return Promise.allSettled(loader.getAnimations({ subtree: true }).map(animation => animation.finished));
+}
+
+const assetsReady = Promise.allSettled([
+  bootScene().catch(error => { canvas.hidden = true; console.warn('WebGL disabled:', error); }),
+  Promise.race([document.fonts?.ready, new Promise(resolve => setTimeout(resolve, 2500))]),
+]);
+const holdMs = reducedMotion ? 0 : Number.parseFloat(getComputedStyle(loader).getPropertyValue('--loader-hold-ms')) || 0;
+
+completeIntro({
+  assetsReady,
+  logoReady: loaderAnimationsFinished(),
+  hold: () => new Promise(resolve => setTimeout(resolve, holdMs)),
+  exit: async () => {
+    loader.classList.add('is-done');
+    await loaderAnimationsFinished();
+    loader.hidden = true;
+  },
+  enter: () => {
+    pageRegions.forEach((region, index) => { region.inert = previousInert[index]; });
+    document.body.classList.remove('is-loading');
+    document.body.setAttribute('aria-busy', 'false');
+    document.body.classList.add('is-ready');
+    initComparison($('#showcase'));
+  },
 });
 
 /* ---------------- Scroll ---------------- */
@@ -213,19 +245,6 @@ $$('.legend li').forEach((li) => {
   li.addEventListener('mouseenter', () => hot(li.dataset.spot, true));
   li.addEventListener('mouseleave', () => hot(li.dataset.spot, false));
 });
-// gentle auto-cycle while the showcase is visible
-let cycleTimer = null;
-let cycleIdx = 0;
-new IntersectionObserver(([e]) => {
-  clearInterval(cycleTimer);
-  if (e.isIntersecting && !reducedMotion) {
-    cycleTimer = setInterval(() => {
-      [1, 2, 3, 4].forEach((n) => hot(n, false));
-      cycleIdx = (cycleIdx % 4) + 1;
-      hot(cycleIdx, true);
-    }, 1800);
-  }
-}).observe($('#showcase'));
 
 /* ---------------- Contact form -> mailto ---------------- */
 $('#form').addEventListener('submit', (e) => {

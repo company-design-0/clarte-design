@@ -13,6 +13,12 @@ test('reference composition keeps the WebGL canvas inside the mockup landscape',
   assert.doesNotMatch(html, /id="cursor"|class="grain"/);
 });
 
+test('comparison exposes a keyboard slider and explicit autoplay control', () => {
+  assert.match(html, /id="comparisonHandle"[^>]*role="slider"[^>]*aria-valuemin="0"[^>]*aria-valuemax="100"/);
+  assert.match(html, /id="comparisonToggle"[^>]*aria-pressed="false"/);
+  assert.match(html, /class="comparison-layer comparison-legacy"[^>]*aria-hidden="true"/);
+});
+
 test('Vietnamese and English expose the same non-empty translation keys', () => {
   assert.deepEqual(Object.keys(DICT.vi).sort(), Object.keys(DICT.en).sort());
   for (const dictionary of Object.values(DICT)) {

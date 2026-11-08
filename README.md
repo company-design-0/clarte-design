@@ -44,6 +44,27 @@ Các giá trị liên hệ mặc định để trống để không dẫn khách
 
 Khi chưa có email, form tạo bản tóm tắt ngay trên thiết bị và cho sao chép. Không gửi hay lưu dữ liệu lên server. Khi đã cấu hình email, form mở ứng dụng email qua `mailto:`; khách vẫn cần tự bấm gửi trong ứng dụng email. Muốn nhận form trực tiếp cần tích hợp backend hoặc dịch vụ form riêng.
 
+## Loading logo trước khi vào trang
+
+Màn hình intro chờ cả tài nguyên trang và animation logo hoàn tất, giữ logo thêm 600ms rồi chạy hiệu ứng mở trang 600ms. Chỉ sau khi hiệu ứng thoát kết thúc, trang mới được mở tương tác và bắt đầu animation hero/showcase. Không dùng timer ngắn để cắt ngang logo khi mạng tải nhanh.
+
+Các mốc thời gian nằm trong `.loader` của `src/style.css`: `--loader-draw-duration`, `--loader-letter-duration`, `--loader-letter-delay`, `--loader-hold-ms` (số mili giây, không có hậu tố), và `--loader-exit-duration`. JavaScript chờ trạng thái hoàn tất thực tế của animation/transition nên thay đổi thời lượng CSS không làm lệch thời điểm vào trang.
+
+Trong lúc intro còn chạy, nội dung trang được đặt `inert` và khóa cuộn; trạng thái được khôi phục khi vào trang. Chế độ giảm chuyển động bỏ nhịp giữ và rút gọn các hiệu ứng.
+
+## Showcase so sánh giao diện cũ / hiện đại
+
+Showcase dùng hai lớp thiết kế Aura cùng kích thước, hé lộ bằng một thanh chia kéo ngang; nội dung không co giãn hoặc trượt theo thanh.
+
+- Kéo sang trái để mở rộng phần hiện đại, sang phải để mở rộng giao diện cũ.
+- Khi chưa có tương tác, thanh tự chạy qua lại, chậm hơn ở hai đầu. Autoplay giữ lại một phần nhỏ của mỗi phiên bản; kéo thủ công có thể mở hoàn toàn một bên.
+- Nhấn/giữ thanh sẽ dừng autoplay ngay. Thả thanh và không thao tác trong 5 giây sẽ tự chạy lại từ vị trí hiện tại.
+- Nút Tạm dừng/Phát tự động cho phép tắt hoặc bật autoplay chủ động.
+- Hỗ trợ chuột và cảm ứng; dùng phím trái/phải để điều chỉnh, Shift để tăng bước, Home/End để mở hoàn toàn một phiên bản.
+- Không tự chạy khi vùng showcase ngoài màn hình, tab bị ẩn hoặc bật `prefers-reduced-motion`. Kéo thủ công vẫn hoạt động.
+
+Logic thời gian nằm ở `src/comparison-motion.js`; DOM, pointer capture và bàn phím ở `src/comparison.js`; giao diện ở `src/comparison.css`.
+
 ## Nội dung và hình ảnh
 
 - `src/i18n.js`: toàn bộ nội dung VI/EN và danh sách lĩnh vực.
