@@ -1,0 +1,152 @@
+{
+  "browserVersion": "157.0.8103.38",
+  "checkedWith": [
+    "Playwright",
+    "Google Chrome",
+    "Chrome DevTools Protocol"
+  ],
+  "directFile": {
+    "url": "file:///Users/linhphan/Documents/Clarte-Design/index.html",
+    "ready": false,
+    "events": {
+      "consoleErrors": [
+        "Access to script at 'file:///src/main.js' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-experimental-site-token-provider, chrome-extension, chrome-untrusted, data, http, https, isolated-app.",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+      ],
+      "pageErrors": [],
+      "failedRequests": [
+        {
+          "url": "file:///src/main.js",
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "url": "file:///src/style.css",
+          "error": "net::ERR_FILE_NOT_FOUND"
+        },
+        {
+          "url": "file:///favicon.svg",
+          "error": "net::ERR_FILE_NOT_FOUND"
+        }
+      ],
+      "badResponses": [],
+      "cdpExceptions": [],
+      "cdpLogErrors": [
+        "Access to script at 'file:///src/main.js' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-experimental-site-token-provider, chrome-extension, chrome-untrusted, data, http, https, isolated-app.",
+        "Failed to load resource: net::ERR_FAILED",
+        "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "Failed to load resource: net::ERR_FILE_NOT_FOUND"
+      ]
+    }
+  },
+  "http": {
+    "url": "http://localhost:4317/index.html",
+    "status": 200,
+    "title": "Clarté Design | Thiết kế web & app tinh gọn, sang trọng",
+    "ready": true,
+    "canvas": {
+      "width": 283,
+      "height": 283,
+      "inLandscape": true
+    },
+    "events": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "cdpExceptions": [],
+      "cdpLogErrors": []
+    }
+  },
+  "responsive": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lang": "vi",
+      "overflow": false,
+      "missingCopy": 0
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lang": "en",
+      "overflow": false,
+      "missingCopy": 0
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lang": "vi",
+      "overflow": false,
+      "missingCopy": 0
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lang": "en",
+      "overflow": false,
+      "missingCopy": 0
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "lang": "vi",
+      "overflow": false,
+      "missingCopy": 0
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "lang": "en",
+      "overflow": false,
+      "missingCopy": 0
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "lang": "vi",
+      "overflow": false,
+      "missingCopy": 0
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "lang": "en",
+      "overflow": false,
+      "missingCopy": 0
+    }
+  ],
+  "menu": {
+    "opened": "true",
+    "closed": "false"
+  },
+  "form": {
+    "invalidField": "true",
+    "briefVisible": true,
+    "brief": "Tên của bạn: Playwright QA\nEmail hoặc số điện thoại: qa@example.test\nBạn cần: Website\n\nKiểm thử Chrome/Playwright — không gửi tin thật."
+  },
+  "devtools": [
+    {
+      "type": "page",
+      "url": "devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@a733b5afbb3ba618844ff8876b89ad1a774b2f18/&targetType=tab&can_dock=true&disableSelfXssWarnings=true"
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "viewport": [
+      320,
+      740
+    ],
+    "lang": "vi",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      320,
+      740
+    ],
+    "lang": "en",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "lang": "vi",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "lang": "en",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      768,
+      1024
+    ],
+    "lang": "vi",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      768,
+      1024
+    ],
+    "lang": "en",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1024,
+      768
+    ],
+    "lang": "vi",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1024,
+      768
+    ],
+    "lang": "en",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1280,
+      577
+    ],
+    "lang": "vi",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1280,
+      577
+    ],
+    "lang": "en",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1440,
+      1100
+    ],
+    "lang": "vi",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1440,
+      1100
+    ],
+    "lang": "en",
+    "overflow": false,
+    "missing": 0,
+    "canvasInLandscape": true,
+    "canvasFits": true,
+    "errors": []
+  }
+]

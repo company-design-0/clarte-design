@@ -1,0 +1,12 @@
+{
+  "reducedMotionDrawCounts": [
+    2,
+    2
+  ],
+  "noWebGL": {
+    "ready": "is-ready",
+    "canvas": false,
+    "landscape": true,
+    "errors": []
+  }
+}

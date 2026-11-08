@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clarté Design | Thiết kế web & app tinh gọn, sang trọng</title>
+  <meta name="description" content="Clarté Design là studio thiết kế website và ứng dụng cho mọi lĩnh vực. Clarity is the new luxury." />
+  <meta name="theme-color" content="#FAF8F5" />
+  <meta property="og:title" content="Clarté Design" />
+  <meta property="og:description" content="Web & app design, refined for every industry. Clarity is the new luxury." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Be+Vietnam+Pro:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#top">Bỏ qua điều hướng / Skip to content</a>
+  <!-- Preloader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" /></svg>
+      <span>C</span>
+    </div>
+  </div>
+
+
+
+  <!-- Header -->
+  <header class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="Clarté Design">
+      <span class="brand__mark">C</span>
+      <span class="brand__word">Clarté Design</span>
+    </a>
+    <nav class="nav__links" aria-label="Chính">
+      <a href="#about" data-i18n="nav.about">Giới thiệu</a>
+      <a href="#services" data-i18n="nav.services">Dịch vụ</a>
+      <a href="#process" data-i18n="nav.process">Quy trình</a>
+      <a href="#principles" data-i18n="nav.work">Nguyên tắc</a>
+      <a href="#contact" data-i18n="nav.contact">Liên hệ</a>
+    </nav>
+    <div class="nav__right">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="vi" class="is-active">VI</button>
+        <span>/</span>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="#contact" class="btn btn--dark btn--sm magnetic" data-i18n="nav.cta">Gửi tin nhắn</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" inert aria-hidden="true">
+    <a href="#about" data-i18n="nav.about">Giới thiệu</a>
+    <a href="#services" data-i18n="nav.services">Dịch vụ</a>
+    <a href="#process" data-i18n="nav.process">Quy trình</a>
+    <a href="#principles" data-i18n="nav.work">Nguyên tắc</a>
+    <a href="#contact" data-i18n="nav.contact">Liên hệ</a>
+  </div>
+
+  <main id="top" tabindex="-1">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__inner container">
+        <p class="eyebrow reveal-hero" data-i18n="hero.eyebrow">Studio thiết kế web &amp; app</p>
+        <h1 class="hero__title reveal-hero">Clarity is <em>the new luxury.</em></h1>
+        <p class="hero__sub reveal-hero" data-i18n="hero.sub">Thiết kế web &amp; app tinh gọn, sang trọng cho mọi lĩnh vực.</p>
+        <div class="hero__ctas reveal-hero">
+          <a href="#contact" class="btn btn--dark"><span data-i18n="hero.cta1">Bắt đầu dự án</span><i class="arrow">→</i></a>
+          <a href="#services" class="btn btn--ghost" data-i18n="hero.cta2">Xem dịch vụ</a>
+        </div>
+      </div>
+      <div class="hero__visual container" id="principles">
+        <div class="showcase reveal-hero" id="showcase">
+          <div class="browser">
+            <div class="browser__bar">
+              <i class="d d--gold"></i><i class="d"></i><i class="d"></i>
+              <span class="url">aura.studio</span>
+            </div>
+            <div class="browser__nav">
+              <b>Aura</b>
+              <span>Home</span><span>Work</span><span>About</span>
+              <em class="mini-btn">Contact</em>
+              <span class="spot" data-spot="1">1</span>
+            </div>
+            <div class="browser__hero">
+              <div>
+                <p class="bh-title">Design that feels <em>effortless</em>.</p>
+                <p class="bh-sub">Simple, elegant, easy to use.</p>
+                <div class="bh-btns"><em class="mini-btn">Get started<span class="spot" data-spot="2">2</span></em><em class="mini-btn mini-btn--ghost">Learn more</em></div>
+              </div>
+              <div class="landscape"><canvas id="webgl" aria-hidden="true"></canvas><i class="sunc"></i><i class="hill hill--back"></i><i class="hill hill--front"></i></div>
+            </div>
+            <div class="browser__cards">
+              <div><i class="ic ic--gold"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="2"/><path d="M8 20h8m-4-3v3"/></svg></i><b>Web design</b><small>Clean layouts</small></div>
+              <div><i class="ic ic--ink"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/></svg></i><b>App design</b><small>Smooth flows</small><span class="spot" data-spot="3">3</span></div>
+              <div><i class="ic ic--taupe"><svg viewBox="0 0 24 24"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/></svg></i><b>UI / UX</b><small>Clear systems</small></div>
+            </div>
+          </div>
+
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__head"><b>Aura</b><span class="ham"></span></div>
+            <div class="landscape landscape--sm"><i class="sunc"></i><i class="hill hill--back"></i><i class="hill hill--front"></i></div>
+            <p class="ph-title">Book your visit</p>
+            <p class="ph-sub">Easy, in one tap.</p>
+            <em class="mini-btn mini-btn--block">Book now<span class="spot" data-spot="4">4</span></em>
+            <p class="ph-meta"><i></i>Today · 10:30</p>
+            <div class="phone__tabs"><span class="on">Home</span><span>Book</span><span>Chat</span><span>Me</span></div>
+          </div>
+        </div>
+        <ul class="legend" aria-label="Design principles">
+          <li data-spot="1"><span class="badge">1</span><span data-i18n="w1">Điều hướng gọn gàng</span></li>
+          <li data-spot="2"><span class="badge">2</span><span data-i18n="w2">Kêu gọi hành động rõ ràng</span></li>
+          <li data-spot="3"><span class="badge">3</span><span data-i18n="w3">Thẻ nội dung nhất quán</span></li>
+          <li data-spot="4"><span class="badge">4</span><span data-i18n="w4">Thân thiện khi dùng một tay</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+      <div class="container">
+        <p class="label reveal" data-i18n="about.label">Về Clarté</p>
+        <p class="about__statement split" data-i18n="about.statement">Clarté Design là studio thiết kế website và ứng dụng cho mọi lĩnh vực.</p>
+        <div class="pillars">
+          <article class="pillar reveal">
+            <span class="pillar__n">i.</span>
+            <h3 data-i18n="about.p1.t">Tối giản</h3>
+            <p data-i18n="about.p1.d"></p>
+          </article>
+          <article class="pillar reveal">
+            <span class="pillar__n">ii.</span>
+            <h3 data-i18n="about.p2.t">Dễ dùng</h3>
+            <p data-i18n="about.p2.d"></p>
+          </article>
+          <article class="pillar reveal">
+            <span class="pillar__n">iii.</span>
+            <h3 data-i18n="about.p3.t">Chỉn chu</h3>
+            <p data-i18n="about.p3.d"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <p class="label reveal" data-i18n="services.label">Dịch vụ</p>
+          <h2 class="h2 reveal" data-i18n-html="services.title">Những gì chúng tôi <em>làm tốt nhất</em>.</h2>
+        </div>
+        <div class="services__grid">
+          <article class="card tilt reveal">
+            <div class="card__icon card__icon--gold">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="1.5"/><path d="M9 20h6M12 16.5V20"/></svg>
+            </div>
+            <span class="card__n">01</span>
+            <h3 data-i18n="s1.t">Thiết kế website</h3>
+            <p data-i18n="s1.d"></p>
+            <span class="card__tags" data-i18n="s1.tags"></span>
+          </article>
+          <article class="card tilt reveal">
+            <div class="card__icon card__icon--ink">
+              <svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/></svg>
+            </div>
+            <span class="card__n">02</span>
+            <h3 data-i18n="s2.t">Giao diện ứng dụng</h3>
+            <p data-i18n="s2.d"></p>
+            <span class="card__tags" data-i18n="s2.tags"></span>
+          </article>
+          <article class="card tilt reveal">
+            <div class="card__icon card__icon--taupe">
+              <svg viewBox="0 0 24 24"><circle cx="8.5" cy="12" r="4.5"/><circle cx="15.5" cy="12" r="4.5"/></svg>
+            </div>
+            <span class="card__n">03</span>
+            <h3 data-i18n="s3.t">Nhận diện thương hiệu số</h3>
+            <p data-i18n="s3.d"></p>
+            <span class="card__tags" data-i18n="s3.tags"></span>
+          </article>
+          <article class="card tilt reveal">
+            <div class="card__icon card__icon--line">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+            </div>
+            <span class="card__n">04</span>
+            <h3 data-i18n="s4.t">Tư vấn trải nghiệm</h3>
+            <p data-i18n="s4.d"></p>
+            <span class="card__tags" data-i18n="s4.tags"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE: industries -->
+    <section class="marquee" aria-label="Industries">
+      <p class="label label--center" data-i18n="industries.label">Cho mọi lĩnh vực</p>
+      <div class="marquee__track" id="marquee"></div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="section__head">
+          <p class="label reveal" data-i18n="process.label">Quy trình</p>
+          <h2 class="h2 reveal" data-i18n-html="process.title">Rõ ràng từ <em>bước đầu tiên</em>.</h2>
+        </div>
+        <ol class="steps" id="steps">
+          <li class="step reveal"><span class="step__n">01</span><div><h3 data-i18n="p1.t"></h3><p data-i18n="p1.d"></p></div></li>
+          <li class="step reveal"><span class="step__n">02</span><div><h3 data-i18n="p2.t"></h3><p data-i18n="p2.d"></p></div></li>
+          <li class="step reveal"><span class="step__n">03</span><div><h3 data-i18n="p3.t"></h3><p data-i18n="p3.d"></p></div></li>
+          <li class="step reveal"><span class="step__n">04</span><div><h3 data-i18n="p4.t"></h3><p data-i18n="p4.d"></p></div></li>
+          <span class="steps__line" aria-hidden="true"><i id="stepsProgress"></i></span>
+        </ol>
+      </div>
+    </section>
+
+    <!-- QUOTE / tip -->
+    <section class="quote section">
+      <div class="container">
+        <p class="label label--center reveal" data-i18n="quote.tip">Mẹo thiết kế</p>
+        <blockquote class="quote__text split" data-i18n="quote.text"></blockquote>
+        <p class="quote__by reveal">— <span data-i18n="quote.by"></span></p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+      <div class="container contact__grid">
+        <div>
+          <p class="label reveal" data-i18n="contact.label">Liên hệ</p>
+          <h2 class="h2 h2--xl reveal" data-i18n-html="contact.title">Bắt đầu bằng <em>một tin nhắn</em>.</h2>
+
+          <div class="chat reveal">
+            <div class="chat__avatar">C</div>
+            <div class="chat__bubble">
+              <p data-i18n="contact.greeting"></p>
+              <small><b>Clarté Design</b> · <span data-i18n="contact.now"></span></small>
+            </div>
+          </div>
+
+          <dl class="info">
+            <div class="reveal"><dt data-i18n="contact.email">Email</dt><dd><a id="cEmail" href="#"></a></dd></div>
+            <div class="reveal"><dt data-i18n="contact.phone">Điện thoại / Zalo</dt><dd><a id="cPhone" href="#"></a></dd></div>
+            <div class="reveal"><dt data-i18n="contact.hours">Giờ làm việc</dt><dd id="cHours"></dd></div>
+            <div class="reveal"><dt data-i18n="contact.area">Khu vực phục vụ</dt><dd id="cArea"></dd></div>
+          </dl>
+        </div>
+
+        <form class="form reveal" id="form" novalidate>
+          <label class="field"><input name="name" autocomplete="name" maxlength="120" required placeholder=" " /><span data-i18n="form.name">Tên của bạn</span></label>
+          <label class="field"><input name="contact" autocomplete="email" maxlength="200" required placeholder=" " /><span data-i18n="form.contact">Email hoặc số điện thoại</span></label>
+          <fieldset class="chips">
+            <legend data-i18n="form.type">Bạn cần</legend>
+            <label><input type="checkbox" name="type" value="Website" checked /><span data-i18n="form.t1">Website</span></label>
+            <label><input type="checkbox" name="type" value="Mobile app" /><span data-i18n="form.t2">Ứng dụng di động</span></label>
+            <label><input type="checkbox" name="type" value="Brand identity" /><span data-i18n="form.t3">Nhận diện thương hiệu</span></label>
+            <label><input type="checkbox" name="type" value="UX consulting" /><span data-i18n="form.t4">Tư vấn UX</span></label>
+          </fieldset>
+          <label class="field field--area"><textarea name="message" rows="3" maxlength="4000" placeholder=" "></textarea><span data-i18n="form.msg">Kể cho chúng tôi về dự án của bạn</span></label>
+          <button type="submit" class="btn btn--dark btn--block magnetic"><span data-i18n="form.send">Gửi tin nhắn</span><i class="arrow">→</i></button>
+          <p class="form__note" id="formNote" role="status" aria-live="polite" data-i18n="form.note">Chúng tôi thường phản hồi trong giờ làm việc.</p>
+          <div id="briefResult" class="brief-result" hidden>
+            <label for="briefText" data-i18n="form.brief">Tóm tắt dự án</label>
+            <textarea id="briefText" rows="6" readonly></textarea>
+            <button type="button" class="btn btn--ghost btn--block" id="copyBrief" data-i18n="form.copy">Sao chép nội dung</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__big"><span>Clarity is</span> <em>the new luxury.</em></p>
+      <div class="footer__row">
+        <div class="brand">
+          <span class="brand__mark">C</span>
+          <span class="brand__word">Clarté Design</span>
+        </div>
+        <p class="footer__tag" data-i18n="footer.tagline"></p>
+        <div class="footer__social">
+          <a id="sFb" href="#" target="_blank" rel="noopener">Facebook</a>
+          <a id="sIg" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a id="sMsg" href="#" target="_blank" rel="noopener">Messenger</a>
+        </div>
+      </div>
+      <div class="footer__row footer__row--small">
+        <p>© <span id="year"></span> Clarté Design. <span data-i18n="footer.rights"></span></p>
+        <p class="tags">#ClarteDesign #WebDesign #AppDesign #MinimalDesign</p>
+        <a href="#top" data-i18n="footer.top">Lên đầu trang</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
